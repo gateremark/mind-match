@@ -8,8 +8,8 @@ To get started with this project, you'll need to have Node.js and npm installed 
 
 Then, clone the repository and install the dependencies:
 
-`$ git clone https://github.com/your-username/react-card-matching.git`
+`$ git clone https://github.com/gateremark/mind-match.git`
 
-`$ cd react-card-matching`
+`$ cd mind-match`
 
 `$ npm install`
