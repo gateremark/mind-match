@@ -1,2 +1,15 @@
-# mind-match
-Built using React, match pairs of cards with the same image.
+# React Card Matching Project
+
+Welcome to my React card matching project! This is a simple but challenging game where the player must match pairs of cards with the same image. 
+
+## Installation
+
+To get started with this project, you'll need to have Node.js and npm installed on your machine. You can download them [here](https://nodejs.org/en/download/).
+
+Then, clone the repository and install the dependencies:
+
+`$ git clone https://github.com/your-username/react-card-matching.git`
+
+`$ cd react-card-matching`
+
+`$ npm install`
