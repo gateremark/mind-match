@@ -15,6 +15,7 @@ button {
 }
 
 button:hover {
+  transition: all ease-in-out 0.3s;
   background: #c23866;
   color: #fff;
 }

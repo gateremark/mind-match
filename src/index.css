@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap');
+
 
 /* base styles */
 body {
-  font-family: Raleway, sans-serif;
+  font-family: 'Almendra Display', cursive;
   margin: 0;
   font-size: 1.5em;
   text-align: center;
