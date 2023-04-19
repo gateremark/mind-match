@@ -8,8 +8,14 @@ To get started with this project, you'll need to have Node.js and npm installed 
 
 Then, clone the repository and install the dependencies:
 
-`$ git clone https://github.com/gateremark/mind-match.git`
+```
+$ git clone https://github.com/gateremark/mind-match.git
+```
 
-`$ cd mind-match`
+```
+$ cd mind-match
+```
 
-`$ npm install`
+```
+$ npm install
+```
