@@ -9,13 +9,42 @@ To get started with this project, you'll need to have Node.js and npm installed 
 Then, clone the repository and install the dependencies:
 
 ```
-$ git clone https://github.com/gateremark/mind-match.git
+git clone https://github.com/gateremark/mind-match.git
 ```
 
 ```
-$ cd mind-match
+cd mind-match
 ```
 
 ```
-$ npm install
+npm install
 ```
+
+## Usage
+
+To start the project, run the following command:
+
+```
+npm start
+```
+
+This will start the development server on [http://localhost:3000](http://localhost:3000) and open the app in your default browser.
+
+## Features
+
+- Match pairs of cards with the same image
+- Tracking the number of turns a player has made
+
+## Contributing
+
+Contributions to this project are welcome! If you'd like to contribute, please fork the repository and create a pull request with your changes. 
+
+## Credits
+
+This project was built using the following technologies:
+- React
+- React Bootstrap
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
