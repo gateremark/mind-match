@@ -32,6 +32,13 @@ function App() {
     first ? setSecondChoice(card) : setFirstChoice(card)
   }
 
+  // reset choices and increase number of turns
+  const resetTurn = () => {
+    setFirstChoice(null)
+    setSecondChoice(null)
+    setFlipped(prevFlip => prevFlip + 1)
+  }
+  
   return (
     <div className="App">
       <h1>Mind Match</h1>
