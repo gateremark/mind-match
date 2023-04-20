@@ -43,7 +43,6 @@ Contributions to this project are welcome! If you'd like to contribute, please f
 
 This project was built using the following technologies:
 - React
-- React Bootstrap
 
 ## License
 
