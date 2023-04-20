@@ -1,14 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import SingleCard from './components/SingleCard'
 
 const myCards = [
-  { "src": "/img/go.png"},
-  { "src": "/img/js.png"},
-  { "src": "/img/php.png"},
-  { "src": "/img/python.png"},
-  { "src": "/img/react.png"},
-  { "src": "/img/rust.png"}
+  { "src": "/img/go.png", matched: false},
+  { "src": "/img/js.png", matched: false},
+  { "src": "/img/php.png", matched: false},
+  { "src": "/img/python.png", matched: false},
+  { "src": "/img/react.png", matched: false},
+  { "src": "/img/rust.png", matched: false}
 ]
 
 function App() {
@@ -32,13 +32,40 @@ function App() {
     first ? setSecondChoice(card) : setFirstChoice(card)
   }
 
+// compare choices of the 2 selected cards
+  useEffect(() => {
+    // const resetTurn = () => {
+    //   setFirst(null);
+    //   setSecond(null);
+    // };
+
+    if (first && second) {
+      if (first.src === second.src) {
+        setCards(prevCards =>
+          prevCards.map(card =>
+            // { if (card.src === first.src) {
+            //   return {...card, matched: true}
+            // } else {
+            //   return card
+            // }}
+            card.src === first.src ? { ...card, matched: true } : card
+          )
+        );
+        setTimeout(resetTurn, 1000);
+      } else {
+        setTimeout(resetTurn, 1000);
+      }
+    }
+  }, [first, second]);
+
+
   // reset choices and increase number of turns
   const resetTurn = () => {
     setFirstChoice(null)
     setSecondChoice(null)
     setFlipped(prevFlip => prevFlip + 1)
   }
-  
+
   return (
     <div className="App">
       <h1>Mind Match</h1>
@@ -49,6 +76,7 @@ function App() {
             key={card.id} 
             card={card}
             handleChoice={handleChoice}
+            flipped={card === first || card === second || card.matched}
           />
         ))}
       </div>

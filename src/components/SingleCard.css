@@ -8,3 +8,12 @@
     border: 2px solid #fff;
     border-radius: 6px;
 }
+
+/* front of card language picture*/
+.card .front {
+    transform : rotateY(90deg);
+    position: absolute;
+}
+.flipped .front {
+    transform : rotateY(0deg);
+}
