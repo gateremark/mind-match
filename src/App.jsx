@@ -16,13 +16,16 @@ function App() {
   const [flipped, setFlipped] = useState(0)
   const [first, setFirstChoice] = useState(null)
   const [second, setSecondChoice] = useState(null)
+  const [disabled, setDisabled] = useState(false)
 
   // shuffle cards
   const shuffle = () => {
     const shuffled = [...myCards, ...myCards]
       .sort(() => Math.random() - 0.5)
       .map((card) => ({...card, id: Math.random()}))
-  
+    
+    setFirstChoice(null)
+    setSecondChoice(null)
     setCards(shuffled)
     setFlipped(0)
   }
@@ -38,8 +41,8 @@ function App() {
     //   setFirst(null);
     //   setSecond(null);
     // };
-
     if (first && second) {
+      setDisabled(true)
       if (first.src === second.src) {
         setCards(prevCards =>
           prevCards.map(card =>
@@ -66,7 +69,13 @@ function App() {
     setFirstChoice(null)
     setSecondChoice(null)
     setFlipped(prevFlip => prevFlip + 1)
+    setDisabled(false)
   }
+
+  // Start the game automatically
+  useEffect(() => {
+    shuffle()
+  }, [])
 
   return (
     <div className="App">
@@ -79,9 +88,11 @@ function App() {
             card={card}
             handleChoice={handleChoice}
             flipped={card === first || card === second || card.matched}
+            disabled={disabled}
           />
         ))}
       </div>
+      <p><strong>No. of Turns: <span className='no___turns'>{flipped}</span></strong></p>
     </div>
   )
 }
