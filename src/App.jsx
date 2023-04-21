@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import SingleCard from './components/SingleCard'
+import { Analytics } from '@vercel/analytics/react'
 
 const myCards = [
   { "src": "/img/go.png", matched: false},
