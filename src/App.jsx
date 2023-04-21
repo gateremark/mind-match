@@ -51,9 +51,11 @@ function App() {
             card.src === first.src ? { ...card, matched: true } : card
           )
         );
-        setTimeout(resetTurn, 1000);
+        // resetTurn()
+        setTimeout(resetTurn, 500);
       } else {
-        setTimeout(resetTurn, 1000);
+        // resetTurn()
+        setTimeout(resetTurn, 500);
       }
     }
   }, [first, second]);

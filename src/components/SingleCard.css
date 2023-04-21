@@ -9,11 +9,28 @@
     border-radius: 6px;
 }
 
-/* front of card language picture*/
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #05A4CC;
+}
+
+/* front of card picture*/
 .card .front {
     transform : rotateY(90deg);
+    transition: all 0.2s ease-in-out;
     position: absolute;
 }
 .flipped .front {
     transform : rotateY(0deg);
+    transition-delay: 0.2s;
+}
+
+.card .back {
+    transition: all 0.2s ease-in-out;
+    transition-delay: 0.2s;
+}
+
+.flipped .back {
+    transform : rotateY(90deg);
+    transition-delay: 0s;
 }
