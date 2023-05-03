@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import SingleCard from "./components/SingleCard";
-import { Analytics } from "@vercel/analytics/react";
+// import { Analytics } from "@vercel/analytics/react";
 
 const myCards = [
 	{ src: "/img/go.png", matched: false },
@@ -19,7 +19,7 @@ function App() {
 	const [second, setSecondChoice] = useState(null);
 	const [disabled, setDisabled] = useState(false);
 
-	// shuffle cards
+	// shuffle card
 	const shuffle = () => {
 		const shuffled = [...myCards, ...myCards]
 			.sort(() => Math.random() - 0.5)
