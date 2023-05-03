@@ -1,6 +1,6 @@
 # React Card Matching Project
 
-Welcome to my React card matching project! This is a simple but challenging game where the player must match pairs of cards with the same image. 
+Welcome to my React card matching project, [Mind Match](https://mind-match.vercel.app/)! This is a simple but 'challenging' game where the player must match pairs of cards with the same image. 
 
 ## Installation
 
@@ -43,7 +43,3 @@ Contributions to this project are welcome! If you'd like to contribute, please f
 
 This project was built using the following technologies:
 - React
-
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
