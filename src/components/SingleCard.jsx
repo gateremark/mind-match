@@ -1,5 +1,6 @@
 import './SingleCard.css'
 
+// passing the props
 const SingleCard = ({card, handleChoice, flipped, disabled}) => {
 
     const handleClick = () => {
